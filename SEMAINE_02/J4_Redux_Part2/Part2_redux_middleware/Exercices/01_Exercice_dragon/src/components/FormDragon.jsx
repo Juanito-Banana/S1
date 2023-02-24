@@ -6,12 +6,11 @@ import {
 
 import { set_dragon, add_dragon } from '../actions/actions-types';
 
-import './Form.scss';
+import './Form.css';
 
-const FormDragon = () => {
+function FormDragon ()  {
     const { dragon, message } = useSelector(state => state.dragonReducer );
     const dispatch = useDispatch();
-
     const handleChange = e => {
         const { value: dragon } = e.target;
 

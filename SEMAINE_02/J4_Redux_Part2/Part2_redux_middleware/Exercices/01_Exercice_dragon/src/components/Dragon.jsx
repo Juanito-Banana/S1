@@ -5,9 +5,9 @@ import {
 
 import { delete_dragon } from '../actions/actions-types';
 
-import './Dragon.scss';
+import './Dragon.css';
 
-const Dragon = ({ dragon }) => {
+function Dragon ({ dragon })  {
   const dispatch = useDispatch();
 
   return (

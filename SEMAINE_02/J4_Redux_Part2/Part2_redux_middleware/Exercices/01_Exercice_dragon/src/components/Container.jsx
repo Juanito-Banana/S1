@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Container.scss';
+import './Container.css';
 
-const Container = ({children}) => {
+function Container ({children}) {
     return (
        <div className="Container-main">
            {children}

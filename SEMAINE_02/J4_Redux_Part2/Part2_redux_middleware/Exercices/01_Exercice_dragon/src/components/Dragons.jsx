@@ -5,13 +5,13 @@ import {
 
 import Dragon from './Dragon';
 
-const Dragons = () => {
+function Dragons ()  {
     // vous devez récupérer spécifiquement la clés dragon correspondante à ce reducer
     const { dragons } = useSelector(state => state.dragonReducer );
 
     if (dragons.length > 0)
         return (
-            <div className="Dragons-principal">
+            <div className="Dragon-principal">
                 <h2>Dragon(s)</h2>
                 {dragons.map((dragon, i) => (
                     <Dragon

@@ -1,30 +1,30 @@
 import React, { useEffect } from 'react';
 
 import {
-    useSelector, 
+    useSelector,
     useDispatch
 } from 'react-redux';
 
-import { 
-    reverse_dragon_list, 
-    start_counter, 
-    stop_start_counter 
+import {
+    reverse_dragon_list,
+    start_counter,
+    stop_start_counter
 } from '../actions/actions-types';
 
-const Header = () => {
-    const { count, chronoCounter , stop} = useSelector(state => { 
+function Header() {
+    const { count, chronoCounter, stop } = useSelector(state => {
 
-        return { 
-            count : state.dragonReducer.count,
-            chronoCounter : state.chronoReducer.counter,
-            stop : state.chronoReducer.stop
-        } 
-    } );
+        return {
+            count: state.dragonReducer.count,
+            chronoCounter: state.chronoReducer.counter,
+            stop: state.chronoReducer.stop
+        }
+    });
     const dispatch = useDispatch();
 
     // Au montage du composant on déclenche le counter
-    useEffect(()=>{
-        if(stop == true) return ;
+    useEffect(() => {
+        if (stop == true) return;
 
         dispatch(start_counter());
 

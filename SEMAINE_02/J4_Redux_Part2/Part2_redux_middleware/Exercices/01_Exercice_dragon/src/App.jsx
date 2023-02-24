@@ -13,13 +13,8 @@ import FormKnight from './components/FormKnight';
 
 import Header from './components/Header';
 
-const App = () => {
-  const { logs } = useSelector(state => {
-
-    return {
-      logs: state.logReducer.logs
-    }
-  });
+function App ()  {
+  const  logs  = useSelector(state => state.logReducer.logs );
 
   return (
     <Container>
@@ -29,7 +24,7 @@ const App = () => {
         <FormKnight />
         <ul>
           <li>Log(s) :</li>
-          {logs.map((log, i) => <li key={i} >Date : {log.date} nb {log.name} : {log.count}</li>)}
+          {logs && logs.map((log, i) => <li key={i} >Date : {log.date} nb {log.name} : {log.count}</li>)}
         </ul>
       </Col>
       <Col>

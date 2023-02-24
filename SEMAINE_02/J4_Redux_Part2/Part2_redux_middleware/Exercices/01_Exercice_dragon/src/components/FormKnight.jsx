@@ -6,9 +6,9 @@ import {
 
 import { set_knight, add_knight } from '../actions/actions-types';
 
-import './Form.scss';
+import './Form.css';
 
-const FormKnight = () => {
+function FormKnight() {
     const { knight, message } = useSelector(state => state.knightReducer );
     const dispatch = useDispatch();
 

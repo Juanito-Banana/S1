@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Col.scss';
+import './Col.css';
 
-const Col = ({children}) => {
+function Col({children}) {
     return (
        <div className="Col-main">
            {children}

@@ -5,9 +5,9 @@ import {
 
 import { delete_knight } from '../actions/actions-types';
 
-import './Knight.scss';
+import './Knight.css';
 
-const Knight = ({ knight }) => {
+function Knight ({ knight })  {
   const dispatch = useDispatch();
 
   return (

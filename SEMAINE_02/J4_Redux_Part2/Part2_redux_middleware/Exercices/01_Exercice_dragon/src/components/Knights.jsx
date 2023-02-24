@@ -5,9 +5,9 @@ import {
 
 import Knight from './Knight';
 
-import './Knight.scss';
+import './Knight.css';
 
-const Knights = () => {
+function Knights  ()  {
     const { knights } = useSelector(state => state.knightReducer );
 
     if (knights.length > 0)
