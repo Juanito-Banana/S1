@@ -21,7 +21,7 @@ let numbers = generate();
 
 ## Partie 2
 
-Ordonnez la liste pas à pas. Une fois la liste de nombres affichée, ordonnez-la en affichant les valeurs toutes les secondes sous la première liste (non-ordonnées).
+Une fois la liste de nombres affichée, ordonnez-la en affichant les valeurs toutes les secondes sous la première liste (non-ordonnées).
 
 ![liste_ordonnees](images/liste_ordonnees.png)
 
