@@ -25,8 +25,4 @@ Une fois la liste de nombres affichée, ordonnez-la en affichant les valeurs tou
 
 ![liste_ordonnees](images/liste_ordonnees.png)
 
-## Partie 3 (faculative)
 
-Reprennez l'exercice précédent dans une nouvelle version et ordonnez la liste de valeurs pas à pas en modifiant à chaque fois la liste de valeurs.
-
-![liste_ordonnees](images/liste_ordonnee_pas_pas.png)
