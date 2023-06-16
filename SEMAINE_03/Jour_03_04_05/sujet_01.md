@@ -6,7 +6,7 @@ Vous utiliserez **reduxtoolkit** ou **redux** pour gérer le state de l'applicat
 
 Vous utiliserez react router pour gérer les routes.
 
-Pour les CSS, vous utiliserez **Styled Component** (CSS-in JS).
+Pour les CSS.
 
 Vous utiliserez l'API suivante pour les données :
 
