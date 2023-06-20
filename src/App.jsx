@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   const dispatch = useDispatch();
 
-  // assignation par décomposition dans un littéral avec plusieurs clés 
+  // assignation par décomposition dans un littéral avec plusieurs clés
   const {
     c: { number, parity, step },
     ca: { count },
@@ -40,4 +40,3 @@ function App() {
 }
 
 export default App;
-
