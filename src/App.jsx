@@ -1,41 +1,27 @@
-import { useDispatch, useSelector } from "react-redux";
-import { increment, fetchCounter } from "./store/counterSlice";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+import Home from './views/Home';
+import Banner from './components/Banner';
+import Basket from './views/Basket';
+import Profile from './views/Profile';
 
 function App() {
-  const dispatch = useDispatch();
-
-  // assignation par décomposition dans un littéral avec plusieurs clés
-  const {
-    c: { number, parity, step },
-    ca: { count },
-    s: { stars }
-  } = useSelector((state) => {
-    return {
-      c: state.c,
-      ca : state.ca,
-      s : state.s
-    };
-  });
-
+  const { mode } = useSelector((state) => state.interface);
 
   return (
-    <div className="App">
-      <button onClick={() =>dispatch(increment()) }>Increment</button>
-      <button onClick={() => dispatch(fetchCounter())}>Async counter</button>
-
-      <p style={{ fontSize: "30px", fontWeight: "bold" }}>{number}</p>
-      <p style={{ fontSize: "30px", fontWeight: "bold" }}>{count}</p>
-
-      <p>
-        Parité : {parity} et valeur de l'incrément: {step}
-      </p>
-      {  (
-        <p>
-          {stars.map((s, i) => <span key={i}>{s}</span>)}
-        </p>
-      )}
-    </div>
+    <BrowserRouter>
+      <div className={`${mode === 'dark' ? 'dark-mode' : ''}`}>
+        <Banner />
+        <div className="container">
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/basket" element={<Basket />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
